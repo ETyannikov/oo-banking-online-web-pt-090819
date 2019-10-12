@@ -17,7 +17,7 @@ class Transfer
       @sender.withdraw(@amount)
       @receiver.deposit(@amount)
       @status = "complete"
-    elsif !valid? && @status == "pending" || @sender.balance < @amount
+    elsif !valid? && @status == "pending" || @sender.balance < @amount 
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
     end
